@@ -1,0 +1,51 @@
+ 
+\documentclass[a4paper,11pt]{book}
+%\usepackage[utf8]{inputenc}
+\usepackage[paperwidth=5.5in,paperheight=8.0in,margin=1.5cm]{geometry}
+% Teste tela do KDX
+
+%\usepackage[brazil]{babel} % Imprimir "índice" e afins em
+                           % Português do Brasil
+
+%\clubpenalty = 10000   % prevent windows
+%\widowpenalty = 10000  % and orphans
+\synctex=1
+
+
+\usepackage{styles/caiomath}    % Some \newcommands and packages for
+                                % doing math
+\usepackage{styles/dissertacao} % Gambiarras antigas próprias para
+                                % isso aqui (vou rever depois)
+
+
+%%% Para fazer testes
+
+%\includeonly{chap1/chap1} %If you just want to process chaptr2.tex 
+
+\begin{document} 
+
+\author{Aluno: Caio De Naday Hornhardt\\ Orientador: Francisco
+  Miraglia Neto} 
+\title{Disserta\c c\~ao}
+%\date{May 2002} 
+
+%\maketitle
+
+%\frontmatter 
+%\tableofcontents 
+%\include{preface} 
+
+%\mainmatter 
+\include{generalidades_geoalg} 
+\include{corpos_ordenaveis}
+\include{tarski_seidemberg}
+\include{teoria_dos_modelos}
+
+%\backmatter 
+%\include{glossary} 
+%\include{notat} 
+%\bibliographystyle{amsalpha} %The style you want to use for references. 
+%\bibliography{mr,refs} %The files containing all the articles and books you ever referenced. 
+%\printindex %Make an index AUTOMATICALLY 
+
+\end{document}

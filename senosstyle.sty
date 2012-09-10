@@ -1,0 +1,93 @@
+\ProvidesPackage{senosstyle}
+
+%% (1) Língua, tipo de folha e codificação
+\RequirePackage[utf8]{inputenc}
+%\RequirePackage[a4paper,text={16.5cm,25.2cm}]{geometry} % Teste de novo A4
+\RequirePackage[brazil]{babel} % Imprimir "índice" e afins em
+                           % Português do Brasil
+
+\clubpenalty = 10000   % prevent windows
+\widowpenalty = 10000  % and orphans
+
+
+%% (1) Packages
+
+% AMS Math
+\RequirePackage{amsmath}
+\RequirePackage{amssymb} %Some extra symbols 
+\RequirePackage{amsthm}  %Theorems
+%\RequirePackage{breqn}   % automatic equation breaking
+
+% Índice e gráficos
+\RequirePackage{makeidx} %If you want to generate an index, automatically 
+%\RequirePackage{graphicx} %If you want to include postscript graphics 
+
+% Símbolos matemáticos
+\RequirePackage{dsfont} %Para \R e \C
+\RequirePackage{enumerate} %Para i), ii), etc.
+
+
+%% (2) New Commands
+
+
+%(2.1) Símbolos Matemáticos
+
+% igual por defi\cao
+\newcommand{\eq}{\ensuremath{=}}
+\newcommand{\eqdef}{\ensuremath{\doteq}}
+\newcommand{\defeq}{\eqdef}
+
+% Símbolos para conjuntos clássicos
+\newcommand{\N}{\ensuremath{\mathds{N}}}
+\newcommand{\Z}{\ensuremath{\mathds{Z}}}
+\newcommand{\Q}{\ensuremath{\mathds{Q}}}
+\newcommand{\R}{\ensuremath{\mathds{R}}}
+\newcommand{\C}{\ensuremath{\mathds{C}}}
+
+% Síbolos para União disjunta
+\newcommand{\dotcup}{\ensuremath{\mathaccent\cdot\cup}}
+\newcommand{\dotbigcup}{\ensuremath{\mathaccent\cdot\bigcup}}
+\newcommand{\bigdotcup}{\ensuremath{\mathaccent\cdot\bigcup}}
+
+% Símbolos para Teoria dos Anéis
+\newcommand{\ideal}{\ensuremath{\triangleleft}}
+\newcommand{\ger}[1]{\ensuremath{\langle #1\rangle}}
+
+% Símbolos pra Lógica
+\newcommand{\ling}{\ensuremath{\mathcal{L}}}
+\newcommand{\M}{\ensuremath{\mathcal{M}}} %Modelo Genérico
+
+
+
+
+% (2.2) Teoremas
+
+% Quadrado de Halmos Preto
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+% Tipos de "teorema", todos sob a mesma enumeracao, enumerados por
+% Secao
+
+
+\theoremstyle{plain}%For Theorem, Lemma, Corollary, Proposition,
+                    %Conjecture,Criterion, Algorithm
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}[theorem]{Proposição}
+\newtheorem{corollary}[theorem]{Corolário}
+
+
+\theoremstyle{definition} % For Definition, Condition, Problem,
+                          % Example
+
+\newtheorem{definition}[theorem]{Definição}
+\newtheorem{example}[theorem]{Exemplo}
+
+
+\theoremstyle{remark}% For Remark, Note, Notation, Claim, Summary,
+                     % Acknowledgment, Case, Conclusion
+
+\newtheorem{remark}[theorem]{Nota}
+\newtheorem{notation}[theorem]{Notação}
+
